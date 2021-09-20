@@ -4,7 +4,7 @@
   "engines": {
     "node": "v14.15.5"
   },
-  "proxy": "http://loadrunnerapis.herokuapp.com/",
+  "proxy": "https://loadrunnerapis.herokuapp.com/",
   "private": true,
   "dependencies": {
     "@syncfusion/ej2-react-calendars": "^19.2.62",
