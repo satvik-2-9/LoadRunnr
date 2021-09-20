@@ -1,6 +1,9 @@
 {
   "name": "frontend",
   "version": "0.1.0",
+  "engines": {
+    "node": "v14.15.5"
+  },
   "proxy": "http://loadrunnerapis.herokuapp.com/",
   "private": true,
   "dependencies": {
