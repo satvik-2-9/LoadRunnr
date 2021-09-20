@@ -16,7 +16,7 @@ export const Login=({history})=>{
 
     useEffect(()=>{
         if(isAuthenicated){
-            history.push('/');
+            history.push('/dashboard');
         }
         if(error){
         //    alert.error(error)
