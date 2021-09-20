@@ -30,7 +30,7 @@ useEffect(()=>{
     <Form.Group as={Col} controlId="formGridName">
       <Form.Label>Driver Name</Form.Label>
  
-      <Form.Control type="text" placeholder={driver.firstname} />
+      <Form.Control type="text" placeholder={driver.firstname} readOnly />
       
     </Form.Group>
 
@@ -44,12 +44,12 @@ useEffect(()=>{
  <Form.Group  className="mb-3" controlId="formGridMobile">
     <Form.Label>Mobile Number</Form.Label>
   
-    <Form.Control placeholder={driver.Phone_No} />
+    <Form.Control placeholder={driver.Phone_No} readOnly />
   </Form.Group>
 
   <Form.Group  className="mb-3" controlId="formLicense">
     <Form.Label>License No</Form.Label>
-    <Form.Control placeholder={driver.Driving_License_No}/>
+    <Form.Control placeholder={driver.Driving_License_No} readOnly/>
   </Form.Group>
 
   <Row className="mb-3">
@@ -61,12 +61,12 @@ useEffect(()=>{
 
     <Form.Group as={Col} controlId="formVehicleBrand">
       <Form.Label>Vehicle Brand</Form.Label>
-      <Form.Control />
+      <Form.Control readOnly />
     </Form.Group>
 
     <Form.Group as={Col} controlId="formBrand">
       <Form.Label>Vehicle Brand</Form.Label>
-      <Form.Control />
+      <Form.Control readOnly />
     </Form.Group>
   </Row>
 
@@ -77,7 +77,7 @@ useEffect(()=>{
   </Form.Group>
   <Form.Group className="mb-3" id="formVehicleName">
       <Form.Label>Vehicle Name</Form.Label>
-      <Form.Control placeholder={driver.VehicleType}/>
+      <Form.Control placeholder={driver.VehicleType} readOnly/>
   </Form.Group>
   <Form.Group className="mb-3" id="formCategory">
       <Form.Label>Vehicle Category</Form.Label>
@@ -93,19 +93,19 @@ useEffect(()=>{
    </Form.Group>
    <Form.Group className="mb-3" id="formVehicleRegNum">
       <Form.Label>Vehicle registration number</Form.Label>
-      <Form.Control placeholder ={driver1.Vehicle_RC_Number}/>
+      <Form.Control placeholder ={driver1.Vehicle_RC_Number} readOnly/>
   </Form.Group>
   <Form.Group className="mb-3" id="formVehiclePurchase">
       <Form.Label>Vehicle Purchase year</Form.Label>
-      <Form.Control />
+      <Form.Control readOnly />
   </Form.Group>
   <Form.Group className="mb-3" id="formEmail">
       <Form.Label>Email</Form.Label>
-      <Form.Control />
+      <Form.Control readOnly/>
                     </Form.Group>
                     <Form.Group className="mb-3" id="formAddress">
       <Form.Label>Address</Form.Label>
-      <Form.Control />
+      <Form.Control  readOnly/>
   </Form.Group>
   
                     
