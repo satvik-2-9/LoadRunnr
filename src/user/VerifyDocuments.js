@@ -1,9 +1,9 @@
-import React,{Fragment,useEffect, useState} from 'react'
+import React,{useEffect, useState} from 'react'
 import { useDispatch,useSelector } from 'react-redux'
 import './styles/VerifyDocuments.css'
 import { MDBDataTable } from 'mdbreact'
-import  {Button} from 'react-bootstrap'
-import { upload,update } from '../actions/authactions'
+
+import {update } from '../actions/authactions'
 import axios from 'axios'
 
 import {  getdriverDetails} from '../actions/authactions'
@@ -12,7 +12,7 @@ const  VerifyDocuments=({match})=> {
 
     const dispatch= useDispatch();
     const {driver,driver1}=useSelector(state=>state.driverdetails)
-     const image=useSelector(state=>state.images)
+/*      const image=useSelector(state=>state.images) */
 
     const driverId = match.params.id;
     const [obj,setobj]= useState({})
@@ -75,25 +75,25 @@ const onsubmithandler=(e)=>{
 
         data.rows.push({
             Documents: 'Vehicle documents',
-            Image: <img src={driver1.RC_Photo?driver1.RC_Photo.url:''} ></img>,
+            Image: <img alt="ig" src={driver1.RC_Photo?driver1.RC_Photo.url:''} ></img>,
             Action: <input type="file" name="RC_Photo" onChange={(e)=>handleimagechange(e)}  ></input>
         });
         
         data.rows.push({
             Documents: 'Driver Insurance',
-            Image: <img src={driver1.Insurance_Photo?driver1.Insurance_Photo.url:''}></img>,
+            Image: <img alt="ig" src={driver1.Insurance_Photo?driver1.Insurance_Photo.url:''}></img>,
             Action: <input type="file" name="Insurance_Photo" onChange={(e)=>handleimagechange(e)}  ></input>
         });
         
         data.rows.push({
             Documents: 'Address Proof',
-            Image: <img src={driver.Aadhar_Photo_Front?driver.Aadhar_Photo_Front.url:''}></img>,
+            Image: <img alt="ig"  src={driver.Aadhar_Photo_Front?driver.Aadhar_Photo_Front.url:''}></img>,
             Action: <input type="file" name="Aadhar_Photo_Front" onChange={(e)=>handleimagechange(e)} ></input>
         });
         
         data.rows.push({
             Documents: 'Driver License Front',
-            Image: <img src={driver.Driving_License_Photo?driver.Driving_License_Photo.url:''}></img>,
+            Image: <img alt="ig" src={driver.Driving_License_Photo?driver.Driving_License_Photo.url:''}></img>,
             Action: <input type="file" name="Driving_License_Photo" onChange={(e)=>handleimagechange(e)} ></input>
         });
         
@@ -105,32 +105,32 @@ const onsubmithandler=(e)=>{
         
         data.rows.push({
             Documents: 'Driver Image',
-            Image: <img src={driver.Profile_Photo?driver.Profile_Photo.url:''}></img>,
+            Image: <img alt="ig" src={driver.Profile_Photo?driver.Profile_Photo.url:''}></img>,
             Action: <input type="file" name="Profile_Photo" onChange={(e)=>handleimagechange(e)}  ></input>
         });
         data.rows.push({
             Documents: 'Police Pic',
-            Image: <img src=""></img>,
+            Image: <img alt="ig" src=""></img>,
             Action: <input type="file"  onChange={(e)=>handleimagechange(e)} ></input>
         });
         data.rows.push({
             Documents: 'Aadhar Front',
-            Image: <img src={driver.Aadhar_Photo_Front?driver.Aadhar_Photo_Front.url:''}></img>,
+            Image: <img alt="ig" src={driver.Aadhar_Photo_Front?driver.Aadhar_Photo_Front.url:''}></img>,
             Action: <input type="file" name="Aadhar_Photo_Front" onChange={(e)=>handleimagechange(e)} ></input>
         });
         data.rows.push({
             Documents: 'Aadhar Back',
-            Image: <img src={driver.Aadhar_Photo_Back?driver.Aadhar_Photo_Back.url:''}></img>,
+            Image: <img alt="ig" src={driver.Aadhar_Photo_Back?driver.Aadhar_Photo_Back.url:''}></img>,
             Action: <input type="file" name="Aadhar_Photo_Back" onChange={(e)=>handleimagechange(e)} ></input>
         });
         data.rows.push({
             Documents: 'Pancard',
-            Image: <img src={driver.PAN_Photo?driver.PAN_Photo.url:''}></img>,
+            Image: <img alt="ig" src={driver.PAN_Photo?driver.PAN_Photo.url:''}></img>,
             Action: <input type="file" name="PAN_Photo_" onChange={(e)=>handleimagechange(e)} ></input>
         });
         data.rows.push({
             Documents: 'Permit',
-            Image: <img src=""></img>,
+            Image: <img alt="ig" src=""></img>,
             Action: <input type="file" onChange={(e)=>handleimagechange(e)} ></input>
         });
         // data.rows.push({
@@ -145,22 +145,22 @@ const onsubmithandler=(e)=>{
         // });
         data.rows.push({
             Documents: 'Vehicle Front',
-            Image: <img src={driver1.Vehicle_Front_Photo?driver1.Vehicle_Front_Photo.url:''}></img>,
+            Image: <img alt="ig" src={driver1.Vehicle_Front_Photo?driver1.Vehicle_Front_Photo.url:''}></img>,
             Action: <input type="file" onChange={(e)=>handleimagechange(e)} ></input>
         });
         data.rows.push({
             Documents: 'Vehicle Back',
-            Image: <img src=""></img>,
+            Image: <img alt="ig" src=""></img>,
             Action: <input type="file" onChange={(e)=>handleimagechange(e)} ></input>
         });
         data.rows.push({
             Documents: 'Vehicle Left',
-            Image: <img src=""></img>,
+            Image: <img alt="ig" src=""></img>,
             Action: <input type="file" name="Vehicle_Front Photo" onChange={(e)=>handleimagechange(e)} ></input>
         });
         data.rows.push({
             Documents: 'Vehicle Right',
-            Image: <img src=""></img>,
+            Image: <img alt="ig" src=""></img>,
             Action: <input type="file" onChange={(e)=>handleimagechange(e)} ></input>
         });
         return data; 

@@ -1,9 +1,10 @@
 @import url("https://cdn.syncfusion.com/ej2/material.css");
 
-.navbar{
-    display: none;
+a{
+    text-decoration: none !important;
+    color: brown;
+    align-items: center;
 }
-
 .tp{
     padding:0%;
     display: flex;
